@@ -1,5 +1,8 @@
 public class ArrayMethods{
   public static int rowSum(int[][] ary, int x) {
+    if (x > ary.length - 1) {
+      return 0;
+    }
     int f = 0;
     for (int i = 0; i < ary[x].length; i++) {
       f += ary[x][i];
