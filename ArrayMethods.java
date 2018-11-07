@@ -42,6 +42,28 @@ public class ArrayMethods{
     return f;
   }
 
+  public static boolean isRowMagic(int[][] ary) {
+    int check = rowSum(ary, 0);
+    int[] ar = allRowSums(ary);
+    for (int i = 0; i < ar.length; i++) {
+      if (check != ar[i]) {
+        return false;
+      }
+    }
+    return true;
+  }
+
+  public static boolean isColumnMagic(int[][] ary) {
+    int check = columnSum(ary, 0);
+    int[] ar = allColSums(ary);
+    for (int i = 0; i < ar.length; i++) {
+      if (check != ar[i]) {
+        return false;
+      }
+    }
+    return true;
+  }
+
 
   public static void main(String[] args) {
     int[][] a = new int[5][10];
